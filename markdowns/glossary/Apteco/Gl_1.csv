@@ -1,0 +1,101 @@
+﻿Name,Definition,Area,FeatureTeam,TermType,Status,Namen,Definition de,Online Tool-Tip,Naam,Definitie nl,Column,Feature,Tech Docs,Active,Universal en-de
+A/B Testing,The testing of two separate scenarios to two randomised groups. A/B testing is usually used in marketing to test variants of a hypothesis to monitor the recipient’s response.,PeopleStage,,,,,,,,,,,,No,No
+AI,"Apteco PeopleStage can monitor the performance of communications and make adjustments accordingly to improve campaign performance. This integrated feature, offering automated content alternatives to continually ensure the best
+response rates, can be seen as a form of “Artificial Intelligence”.",Orbit,,,,,,,,,,,,No,No
+Analysis,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+Analysis,,,,Apteco,To Do,,,,,,,,,No,No
+Analytics,"Analytics is the interrogation, identification and interpretation of meaningful patterns in data.",Apteco,,,,,,,,,,Social,,No,No
+Archiving,The storing of data which is no longer required to be immediately available but would be beneficial to recall if needed.,,,,,,,,,,,,,No,No
+Archiving Collections,The storing of Orbit Collections which are no longer required to be immediately available to you but would be beneficial to recall if needed.,Orbit,,,,,,,,,,,,No,No
+Area,An Area is a group of related Campaigns. Areas can also be grouped into larger Areas.,PeopleStage,,,,Container,,,,,,,,No,No
+Audience,"Audiences define who should be selected to enter or proceed through a Campaign and can be simple FastStats selections, Interaction Selections, or Journey Selections, but you can also template your own more complex Audiences. PeopleStage is configured to recognise queries created on a particular FastStats table as Audience Selections, for example, the People table in the Holidays training system.",PeopleStage,,Product,,,,,,,,,,No,Yes
+Audience,"Driven by selection rules, an Orbit Audience allows you to create, check and then generate a list of records that represents a target audience which you can then export or share with others",Orbit,,,,,,,,,,,,No,Yes
+Automation,,Apteco,,,To Do,,,,,,,,,No,No
+Automation,Reduction of human intervention in processes,,,,,,,,,,,,,No,No
+Bounces,Within the context of a response gathered from the Email Service Provider. Bounces occur when an email cannot reach an inbox due to the email address being invalid or the mailbox being at capacity.,Response,,,,,,,,,,,,No,No
+Campaigns,,Orbit,,,To Do,,,,,,,,,No,No
+Campaigns,"A Campaign is a series of linked Messages, interconnected
+with Pools where people wait until they are selected by an
+Audience for the next step.",PeopleStage,,,Done,Kampagne,,,,,,,,No,No
+Channel,,PeopleStage,,Taxonomy,To Do,,,,,,,,,No,No
+Channel,"The broadcast medium used within a campaign, for example; Email, SMS, FTP, DM and Social.",Apteco,,,,,,,,,,,,No,No
+Channel,,Orbit,,,To Do,,,,,,,,,No,No
+Clicks,Within the context of a response gathered from the Email Service Provider. Clicks occur when an individual recipient has opened the email and clicked on content within the email. Usually recorded as unique clicks.,Response,,,,,,,,,,,,No,No
+Compositions,"The Compositions page is where an administrator can create new, or modify existing, Orbit Audience output templates.",Orbit,,,,,,,,,,,,No,No
+Constraints,Parameters applied to a Campaign or Area to restrict the audience volume commencing or flowing through the Campaign.,"Apteco, PeopleStage",,,,,,,,,,,,No,No
+Contact Strategy,Parameters applied to a Campaign or Area which restrict the number of communications a person can receive over a timeframe.,,,,,,,,,,,,,No,No
+Content,,Orbit,,,To Do,,,,,,,,,No,No
+Content,Part of the Message step where the user defines any campaign specific output fields required for dynamic content; these are above and beyond the required fields usually set up the Channel.,PeopleStage,,,,,,,,,,,,No,No
+Creative,The physical communication an individual receives.,,,,,,,,,,,,,No,No
+CRM,Customer Relationship Management system,,,,,,,,,,,,,No,No
+CRM Integration,Customer Relationship Management system - Apteco FastStats integrates with http://salesforce.com and Microsoft Dynamics Customer Relationships Management (CRM) software.,,,Taxonomy,,,,,,,,,,No,No
+Customisation,Creating a communication which references experiences and desires on an individual basis,PeopleStage,,Taxonomy,,,,,,,,,,No,No
+Data Variables,The criteria by which you can interrogate and break down your data. [This could/should be the same as Variables really!],Orbit,,,,,,,,,,,,No,No
+DataView,"DataViews are used to present a user-friendly name to one or more FastStats systems.
+In a FastStats multisystem environment, DataViews are used to control which system/s you can access in Orbit depending on the domain of your email address. You then log in to that DataView with your username and password.",Orbit,,,,DataView,"DataViews werden genutzt um einen benutzerfreundlichen Namen für ein oder mehrere FastStats Systeme zu präsentieren. In einem FastStats Multisystem Umfeld werden DataViews verwendet um die Ihnen zugänglichen Systeme zu kontrollieren, je nachdem welche Domain Ihrer E-Mail Adresse zugehörig ist. Sie loggen sich anschließen in den DataView mit Ihren Login Daten ein.",Orbit,,,,,,No,Yes
+DI,"Digital Integrator – The Apteco Marketing Suite integrates with digital marketing platforms to streamline your marketing processes and automate multi-channel campaigns using email, SMS and digital channels.",,,,,,,,,,,,,No,No
+Digital Responses,The interaction of the individual to the communication sent via a digital channel,,,,,,,,,,,,,No,No
+Digital Service Provider,An organisation which provides technologies and services to facilitate online interaction by the external customer,,,,,,,,,,,,,No,No
+Direct Adverts,Simple Facebook Campaings,PeopleStage,,,,,,,,,,Social,,No,No
+Direct Mail,Printed media,,,,,,,,,,,,,No,No
+Direct Posts - Facebook,"Publish Direct Posts to a Facebook page: the post can be text, an image or a video.",PeopleStage,,Marketing,,,,,,,,Social,,No,No
+EPS,"EPS (Email Preference Service)
+An official body which registers the names and email addresses of those who do not wish to receive unsolicited email.",Apteco,,Marketing,,,,,,,,,,No,No
+ESP,Email Service Provider (Digital Integrator) The Apteco Marketing Suite™ integrates with email service providers to automate data uploads from the Apteco PeopleStage™ campaign management tool for unattended and scheduled marketing broadcasts,,,,,,,,,,,,,No,No
+Excelsior,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+Expressions,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+Facebook Direct Advert,Sponsored posts managed in Facebook,Apteco,,Marketing,,,,,,,,Social,"Help Hub Summary, PeopleStage Summary",No,No
+FastStats,"Apteco FatsStats includes data exploration, analysis and visualisation tools that allow you to dissect your customer data for improved insight and campaign targeting.","Apteco, FastStats",,,,,,,,,,,,No,Yes
+FERG,"FastStats Email Response Gatherer - software engine, set up by the Administrator, which - where the ESP makes it possible - runs at defined intervals in the background, monitoring and downloading from the ESP information relating to opens, clicks, bounces, etc.","Apteco, Response",,Product,,,,,,,,,,No,Yes
+FTP,File Transfer Protocol,,,,,,,,,,,,,No,No
+GDPR,"The EU General Data Protection Regulation (GDPR) was designed to harmonise data privacy laws across Europe, to protect and empower all EU citizens' data privacy and to reshape the way organisations across the region approach data privacy.",,,,,,,,,,,,,No,No
+Geo,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+GUI,Graphical User Interface,,,,,,,,,,,,,No,No
+IIS,Microsoft Internet Information Services for Windows® Server software,,,,,,,,,,,,,No,No
+Integrations,The bringing together of functionality and technology to create a more efficient operation.,,,,,,,,,,,,,Yes,No
+ITUP,In the usual place,,,Aptecoisms,,,,,,,,,,No,No
+Journey,The flow of individuals through a campaign and the paths the individuals can follow depending on their interactions.,,,,,,,,,,,,,No,No
+List,A list is a compilation of subscribers that receive your communications,,,,,,,,,,,,,No,No
+Live Data,"“Real Time” data such as registrations, which can be captured outside the FastStats system but used within PeopleStage campaigns without awaiting a system build.",PeopleStage,,,,,,,,,,,,No,No
+Message,"A Message is a single piece of marketing material. A message could be an email, Facebook communication, call centre contact or a piece of direct mail, depending on the delivery channel.",,,,,,,,,,,,,No,No
+Modelling,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+N-Per,"A constraint limiting the Campaign to select N transactions Per Grouping table. E.g. One person per household, or two bookings per person.",,,,,,,,,,,,,No,Yes
+Opens,"Within the context of a response gathered from the Email Service Provider, this is when an individual recipient has opened the email to view the content.",Response,,,,,,,,,,,,No,No
+Opt-In,Willingly choose to participate in receiving communications,,,,,,,,,,,,,No,No
+Opt-in,"An ""Opt-in"" can generally be defined as a situation where contacts themselves submit their contact details to an organization, with the expectation that they'll receive marketing communication as a result.",,,,,,,,,,,,,No,Yes
+Opt-out,"An opt out is a request to be removed from an marketing communication deployment list for a specific group of messages, or all lists owned by the sender.",,,,,,,,,,,,,No,Yes
+Orbit,"Apteco Orbit is a browser-based, platform-independent sharing application that works on tablets, phones and desktop computers and allows you to share stories of data insight, see overviews of PeopleStage campaign activity and generate target audience lists.","Apteco, Orbit",,,,,,,,,,,,No,No
+PeopleStage,"Apteco Limited’s multi-channel, marketing campaign planning and automation software.",,,,,,,,,,,,,No,Yes
+Personal Data,Personal data is anything that makes a Data Subject identifiable as a natural person. Personal Data as defined in the GDPR is much broader than Personally Identifiable Information (PII).,,,,,,,,,,,,,No,No
+Personalisation,Tailoring a message to specific individual or individual group/segment needs and desires.,,,,,,,,,,,,,No,No
+Pool,Holding area for individuals within the campaign,PeopleStage,,,,,,,,,,,,No,Yes
+Port,A group of inputs or outputs to the computer.,,,,,,,,,,,,,No,No
+Privacy,Capability for an individual or group to restrict their information from being viewed and used.,,,,,,,,,,,,,No,No
+Programme,,PeopleStage,,,To Do,Programm,,,,,,,,No,No
+Pseudonymization,"You can separate Personal Data from analysis variables before loading data into the Apteco Marketing Suite, using a pseudonym as an identifier. You can re-link pseudonymised data with the personal data before sending to the broadcaster or lettershop. You could use an existing variable like customer number or a new one (e.g. hash value).",,,,,,,,,,,,,No,No
+Push Notifications,"Associated with Web browsers and Apps, these are messages which can reach an audience either as a triggered event or when sent by a DSP.",,,,,,,,,,,,,No,No
+Recipients,Individuals who receive the communication.,,,,,,,,,,,,,No,No
+Reporting,,Orbit,,Taxonomy,To Do,,,,,,,,,No,No
+Reporting,,PeopleStage,,Taxonomy,To Do,,,,,,,,,No,No
+Response Attribution,The assignment of transactional responses to a campaign.,,,,,,,,,,,,,No,No
+Responses,,PeopleStage,,Taxonomy,To Do,,,,,,,,,No,No
+Responses,Individual interactions that either meet a campaign response definition or are predefined interactions within a DSP or an ESP,,,,,,,,,,,,,No,No
+Seeds,Usually a list of contact details associated with individuals who have a vested interest in the delivery of a campaign. Seeds can be included as recipients of the campaign to confirm that the send and content of the creative are correct.,PeopleStage,,,,,,,,,,,,No,Yes
+Selection,"Selection is at the core of all the work within FastStats, enabling you to identify, count and analyse a segment of your data.",FastStats,,Product,,,,,,,,,,No,No
+Smoke Test,Testing environment in PeopleStage which allows the user to test the flow and volume of a campaign without any communication history being recorded.,PeopleStage,,Product,,,,,,,,,,No,Yes
+SMS,"Short Messaging Service (Protocol) used to communicate information through the mobile phone network. The message can contain text, images or emojis and can be delivered to a subscriber's cell phone or text-enabled PDA.",,,,,,,,,,,,,No,No
+Social,,PeopleStage,,Taxonomy,To Do,,,,,,,Social,,No,No
+Social,Interactive technology media platforms which facilitate the sharing of information.,,,,,,,,,,,Social,,No,No
+Subscriber,A subscriber is a person who has opted to receive communications from your organisation,,,,,,,,,,,,,No,No
+Suppression,"Using the information on one or more lists to remove duplication of specific names before a mailing, or to eliminate those undesirable names. Suppressed items are not generally mailed.",Apteco,,,,,,,,,,,,Yes,No
+Template,"A template controls the header, background colour, borders, and layout of an email. You can use the same template as the basis of multiple emails. It contains your brand and the layout of information.",PeopleStage,,,,,,,,,,,,No,No
+Transactional Responses,"Responses defined on the Response Step of the PeopleStage campaign. Usually based on the transactional table e.g. new purchases, brochure requests, appointments requested.",PeopleStage,,Product,,,,,,,,,,No,No
+Unpublished Post,Release a post previously created against a direct advert but invisible to the public on Facebook,Apteco,,Marketing,,,,,,,,Social,"Help Hub Summary, PeopleStage Summary",No,No
+Unsubscribed,"Unsubscribed signifies a subscriber has either unsubscribed from your communication or you have unsubscribed them. When a subscriber clicks the unsubscribe link in an email, their status is set to Unsubscribed",,,,,,,,,,,,,No,No
+Upload File,The movement of the output file to the Communication Channel,PeopleStage,,,,,,,,,,,,No,No
+URN,"A URN (Unique Reference Number) is the unique identifier for a record in a FastStats system, it can be used to identify a Person or a Household for example. ",FastStats,,Apteco,,,,,,,,,,No,No
+Variables,"Variables are the data fields in FastStats, either built from the SCV fields into the FastStats system by Designer (System Variables), or user generated from existing variables using the FastStats' Wizards (Virtual Variables).",,,,,,,,,,,,,No,No
+Visualisation,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No
+Voucher Sets,Lists of codes that can be added to message Content as a means of appending unique codes to each record in the output file. It is intended that the recipient quotes their unique code at the time of transacting.,,,,,,,,,,,,,No,No
+Whitelisting,"Whitelisting is the process of configuring a spam filter to exempt certain email messages from being filtered or rejected. In this case, it refers to configuring your own corporate mail server so that it doesn't reject or filter the email campaigns you send.",,,,,,,,,,,,,No,No
+Wizards and VV,,FastStats,,Taxonomy,To Do,,,,,,,,,No,No

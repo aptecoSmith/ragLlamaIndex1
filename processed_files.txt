@@ -1,0 +1,143 @@
+markdowns\glossary\Apteco\Gl\Personal.md:60e9469adce692b5301759fb02ccc209
+markdowns\glossary\Apteco\Gl\CRM.md:43943ea68ab9af3fe07e6970cba5501d
+markdowns\glossary\Apteco\Gl\DI.md:10c41cdfe40c621925d206f39426e676
+markdowns\glossary\Apteco\Gl\Channel_1_2.md:2ee06329eded0498a8ac93337079a577
+markdowns\glossary\Apteco\Gl\SMS.md:e42db1a24fac9a181d4cd016b486700d
+markdowns\audiencesMarkdown\Audiences\Creating an Audience\Working with multiple choice values Arrays.md:1ec2e13b68ca0a322af930ef08d6194f
+markdowns\glossary\Apteco\Gl\Selection.md:b37a68b9a1d2513ff52f79776be23056
+markdowns\glossary\Apteco\Gl\Unpublished.md:cf7eaf5ce48ed8a02e6e0c9bac5a7096
+markdowns\glossary\Apteco\UI\Send_1.md:7828dcee429a989341aee29e5e9dd7a2
+markdowns\glossary\Apteco\Gl\Creative.md:91828f291f6157dcef7c383ab422eb82
+markdowns\glossary\Apteco\UI\Measures.md:9227f59c5b2a66cd22abb6ae93b3bc98
+markdowns\glossary\Apteco\Gl\FastStats.md:bd8639a8b564665040e7544f521ed07b
+markdowns\glossary\Apteco\Gl\Subscriber.md:56bf2354be311744cb073e2e480319f6
+markdowns\glossary\Apteco\UI\Date.md:dd580051332592e99b9fd0598aa8e5a6
+markdowns\glossary\Apteco\Gl\Response.md:bcc8a167eb1c203e2b6bf4028e254a31
+markdowns\glossary\Apteco\Gl\ESP.md:d4942a428c13ea757d01a5eea51cd8c4
+markdowns\glossary\Apteco\UI\Edit.md:dc145a0874b5a644c14b951156b3b4a0
+markdowns\glossary\Apteco\Gl\Message.md:ee863e71ea168d5cd7a55f5d2864ee9c
+markdowns\glossary\Apteco\UI\Application.md:e40832efd0531fca649cc20df5227806
+markdowns\glossary\Apteco\Gl\Excelsior.md:0a7ce5b76a67fb58b3a029ed049d6d62
+markdowns\glossary\Apteco\Gl\Port.md:791ba2e0a385cb3bc71d6d2a17f7040a
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Solutions\Audience workbooks Browse data solution.md:33e62fa9d4e1ea9f064ccfc0130f87a8
+markdowns\glossary\Apteco\Gl\PeopleStage.md:9158bf4518db37ddd00b37a517be810e
+markdowns\glossary\Apteco\Gl\FERG.md:87780f3939554b4ab3c959dfcaad9af9
+markdowns\glossary\Apteco\Gl\Customisation.md:f8d79b3d0cd528bc02e5e861480f1f67
+markdowns\glossary\Apteco\UI\Icon.md:b5a64458cde372957d08632ea91b1683
+markdowns\glossary\Apteco\Gl\Opt-out.md:62aaacccdfb64fae70d0224f628bce58
+markdowns\glossary\Apteco\Gl\Recipients.md:d42b247c0fec52b7a5a03ff1a56b07c3
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Benefits.md:a34b5246e1d5a76154c492af5ec0d680
+markdowns\glossary\Apteco\Gl\Constraints.md:7e6f2501d3937eee05fed19b9b63af66
+markdowns\glossary\Apteco\UI\Include codes.md:9115f4e5dba70cc2018aaf64ed99bb83
+markdowns\glossary\Apteco\Gl\Clicks.md:81a0a9962954a91af7b58ad72ec67391
+markdowns\glossary\Apteco\Gl\Live.md:ed12b6d1c4447b385484ca72ebbaa25a
+markdowns\glossary\Apteco\Gl\Transactional.md:7069db70b46f3f8a1b66b66b22d53aa6
+markdowns\high_level.md:9a00ce44a8c8e9864823158d82657fb8
+markdowns\glossary\Apteco\Gl\Suppression.md:653661005cba72566a976f44a0c23c5e
+markdowns\glossary\Apteco\Gl\Social.md:dba05b50b3e97d95eb200ed890a95d51
+markdowns\glossary\Apteco\Gl\Audience.md:cc551e83fa439585903826bf7d19b4ce
+markdowns\glossary\Apteco\Gl\DataView.md:b14a133c8920bff3f36f0819d3d6f998
+markdowns\glossary\Apteco\Gl\Reporting.md:8d7877210526efcf499a4f096730707e
+markdowns\glossary\Apteco\Gl\Geo.md:b2931040e9c82c6a6cef4b050b582d4d
+markdowns\audiencesMarkdown\Audiences\Introduction.md:b6c517e624cd405cb2e5f73e5da908be
+markdowns\glossary\Apteco\Gl\Audience_1.md:f20ae100af2faca1b57d1eb1aa66c369
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Favourites.md:e21a8c7267ee490020d77c20d277516d
+markdowns\glossary\Apteco\Gl\Archiving.md:aed1f4145cd8866be8f281d319e4fd29
+markdowns\glossary\Apteco\UI\High.md:acebff8ae400e2091cedfccd48880e86
+markdowns\audiencesMarkdown\Audiences.md:c6198d4bd243c1afc6ff19f9ba1b7391
+markdowns\glossary\Apteco\UI\Currency.md:cf9ec6b368ce3e3245b79ad366e06c6b
+markdowns\glossary\Apteco\Gl\Wizards.md:d2710b2b032c4cd4e8ba720a4ed5fe8d
+markdowns\glossary\Apteco\Gl\Responses_1.md:a7923708e59e6c726ea604e0c094359c
+markdowns\glossary\Apteco\UI\High Earners.md:eda9ef8b35256f65c7b9df4245187b33
+markdowns\glossary\Apteco\UI\Multi.md:18c77f5eefcfb7945411f90189d5c4b6
+markdowns\glossary\Apteco\Gl\A.md:219ccab5f9ea8b95b9245afa6b976681
+markdowns\audiencesMarkdown\Audiences\Creating an Audience\Working with numbers and currency.md:76448728239a37166ea1395c2b6e2574
+markdowns\glossary\Apteco\Gl\Content.md:0926f3fcf19aa6b07ae2d9c5aefb6e3f
+markdowns\glossary\Apteco\Gl\Compositions.md:01a28818d3b2ec1b3c38d66c668f90c7
+markdowns\glossary\Apteco\Gl\Social_1.md:484a32e8d8a9ba993f9e0ba539f12118
+markdowns\Limiting an audience.md:85e740cd388d342edd8cd3de9f1c857c
+markdowns\glossary\Apteco\UI\Date_1.md:ac30ec481261a93b9c9b9234ecdea3f7
+markdowns\glossary\Apteco\Gl\Upload.md:bb9ff575b19c00c74bd5fe769bd8c0e5
+markdowns\glossary\Apteco\Gl\Analytics.md:afd78cd7415c76201567f0d4acb9d50d
+markdowns\glossary\Apteco\Gl\Variables.md:319d07107e1d40eba522cfcdc27adbce
+markdowns\glossary\Apteco\UI\High_1.md:91d96045c150a13dd7fa62e515b3c133
+markdowns\glossary\Apteco\UI\Send.md:cea26f628355a7c2820071a1d3b9c757
+markdowns\glossary\Apteco\Gl\Pool.md:8a17e76a51a96b041171e2853a368074
+markdowns\glossary\Apteco\Gl\Push.md:fa169e27d7318237854b72133c0ebb36
+markdowns\audiencesMarkdown\Audiences.md:e48a145eb1acf5990c86b9bac1021cbb
+markdowns\glossary\Apteco\Gl\ITUP.md:62d10c0d57d560bc3ac3936c12580b75
+markdowns\glossary\Apteco\UI\View.md:6aa5ba7e88fcd3e1c14c37c31b4ca1e9
+markdowns\glossary\Apteco\UI\Public.md:9188923bb2678019888ae38910b5f43d
+markdowns\audiencesMarkdown\Audiences\Creating an Audience\Working with text values.md:ee07c7a34816017ecd967b36755eaf35
+markdowns\glossary\Apteco\UI\Restore.md:3dd85ce0b228a581782dba6206d6b7ce
+markdowns\glossary\Apteco\Gl\Unsubscribed.md:05ca54e10312fab2d2a3cc1d22cbc946
+markdowns\glossary\Apteco\Gl\Data.md:53ee58f89838440f93af8c9952122989
+markdowns\glossary\Apteco\Gl\Direct_1.md:4d6fc7bfb3de919293a8a6f46436e5df
+markdowns\glossary\Apteco\Gl\FTP.md:e3fec061bde694ee00fd1011ebc2e144
+markdowns\audiencesMarkdown\Audiences\Creating an Audience\Working with single choice values Selectors.md:97ac47aee6e5ca52ca1dbe4dc667b35c
+markdowns\glossary\Apteco\Gl\Integrations.md:b3c21297501fe8a040bafa6e7e16d61d
+markdowns\glossary\Apteco\UI\Open.md:4b3e3e9d0b10d28da4a3dd11bf2e548f
+markdowns\glossary\Apteco\Gl\Reporting_1.md:ec61a84a0f7093d69318d0f69065fcc0
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Solutions.md:5b6f3fa5f08c264627dfa31082ec2f2f
+markdowns\glossary\Apteco\Gl\Responses.md:ab28908047511642a139b9bc4a907d33
+markdowns\glossary\Apteco\Gl\Pseudonymization.md:a5909734c68a5a562e9a12799ba9bacf
+markdowns\glossary\Apteco\Gl\N-Per.md:030e30f174b38bee9fa9a34f49adf340
+markdowns\glossary\Apteco\Gl\Automation.md:b12fc42b82f12bd8a31ab9d368581512
+markdowns\glossary\Apteco\UI\Numeric.md:dca5dcfe31f9b2fb4b052438be6117c4
+markdowns\audiencesMarkdown\Audiences\Creating an Audience.md:2914371dfa167ba629764805e1f6112c
+markdowns\glossary\Apteco\Gl\Orbit.md:2dcfffabdc0a7ddfabf27d63807421dc
+markdowns\glossary\Apteco\Gl\Channel_1.md:4d039440a0a6b7fca13eb1dc82bce05f
+markdowns\glossary\Apteco\Gl\Voucher.md:14d5515c84565ef1abd84d146a166c9b
+markdowns\glossary\Apteco\Gl\Journey.md:d5285a77d060bda53012d4d697123ca1
+markdowns\Orbit Search.md:0b744ad9b1180750b31f2f598160d90f
+markdowns\glossary\Apteco\Gl\Visualisation.md:248c312efff4e20af7f54bdd396f3327
+markdowns\glossary\Apteco\UI\Private.md:a1b194de0ba6aa0a1223e5f69f72878d
+markdowns\glossary\Apteco\UI\Selector.md:8ba359127dbf85a46edcda833c75b7cf
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks New item.md:d11dc3902082fbe76c042dbce9eae8d7
+markdowns\glossary\Apteco\Gl\Modelling.md:b505c7c2fc558c0f47fd344d5844bf9c
+markdowns\glossary\Apteco\Gl\Opt-in_1.md:fca65effad74ff23e753d5ef8f0c56f8
+markdowns\glossary\Apteco\Gl\Campaigns_1.md:cd9318019608426fcd18502eb26066c5
+markdowns\glossary\Apteco\Gl\Campaigns.md:24f59813af08bb29f1fd87ff1e6ddc07
+markdowns\glossary\Apteco\Gl\Automation_1.md:0a4149953bd1ba0eb911d7d86e502982
+markdowns\glossary\Apteco\Gl\Personalisation.md:cabc4d84c20c4467690e20c50db58db2
+markdowns\glossary\Apteco\Gl\CRM_1.md:cfd97afc2add516f40e440e3e2ed0bb6
+markdowns\glossary\Apteco\UI\Recently.md:17dc52fee7f16b6f8d3ce1517fde4b58
+markdowns\glossary\Apteco\Gl\Template.md:8233ff46c6c2c2ed3dada29f5593c243
+markdowns\glossary\Apteco\Gl\EPS.md:926dc689164a25a23eba8c7064b5a0fd
+markdowns\glossary\Apteco\Gl\Digital.md:aa8d7f9be78f4477bbcc420e39f54575
+markdowns\glossary\Apteco\Gl\Smoke.md:a4732f3c02ad8d8d8e0454bce8f35010
+markdowns\glossary\Apteco\Gl\Bounces.md:fbb21c0e3e90230af3ed63f4774ec5e5
+markdowns\glossary\Apteco\Gl\Content_1.md:f3e5e2f31f991a68617113e025811942
+markdowns\glossary\Apteco\Gl\GDPR.md:2e3763bd58e55d1b2b35200b38175aff
+markdowns\glossary\Apteco\Gl\IIS.md:d8d079798a61c3e3744b609afa22f149
+markdowns\glossary\Apteco\UI\Reference.md:f412c1649d5e7a3eedf52a2d0ee5414f
+markdowns\journeybuilder\Orbit Campaign Journey Builder fa37c9c0fe5b43f2a682b3d57b1c64dc.md:0d06f7567ff15c0a1a6ba3982d8f9255
+markdowns\glossary\Apteco\Gl\List.md:9919866fbb89ca5421e164a7ff965e46
+markdowns\glossary\Apteco\Gl\Area.md:bc3f4807b13c76ab1d107f1892f744f2
+markdowns\glossary\Apteco\Gl\Archiving_1.md:1d5f9661558014d5f6ed1cec6f959833
+markdowns\glossary\Apteco\Gl\Opt-In.md:1789667605a16e4b8034a84044a0e6b9
+markdowns\glossary\Apteco\Gl\GUI.md:55526e14af5d8ac908923707f258f0b7
+markdowns\glossary\Apteco\UI\Send_1_2.md:e447ede449fa4bacbe87f8fff871350f
+markdowns\glossary\Apteco\Gl\URN.md:ef31a35eb97955c26e58ad1e597375f0
+markdowns\glossary\Apteco\Gl\Channel.md:6bada24edf1c64a646faf0daecb15b41
+markdowns\glossary\Apteco\Gl\Programme.md:bb373a318a05866867f0f2a8d51c5f38
+markdowns\glossary\Apteco\Gl\Expressions.md:15d486e6a20d816fccacf979de3992b1
+markdowns\glossary\Apteco\Gl\Direct Posts.md:e85c785497f93dc9d8317a3778b2d694
+markdowns\glossary\Apteco\Gl\Facebook.md:c6d8ea257c18c38718e49ff960ebf45c
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Solutions\Audience workbooks Export data solution.md:b372a5485f77563b0b33d224f3229fd8
+markdowns\glossary\Apteco\Gl\Analysis_1.md:61b32e85b7bccc1946ad583c90434184
+markdowns\glossary\Apteco\Gl\Seeds.md:4ddd840306db29aec681c8926a674e97
+markdowns\glossary\Apteco\Gl\Direct.md:e11a87811eb0551aa09cb1c0a37a8d35
+markdowns\glossary\Apteco\Gl\Contact.md:1636711f6a4999dc3ea4cb911926ead3
+markdowns\glossary\Apteco\Gl\Opens.md:bf33ac06ea5b833bc24b1a3f5347d635
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Introduction.md:0bbbcdc9b26c727752a58a983ab7ea9e
+markdowns\audiencesMarkdown\Audiences\Introduction.md:da349a67225c9faf28f0d72d779108a5
+markdowns\high_level.md:65550dac77a9753ab7ee6807a8adfe2e
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release\Audience workbooks Solutions\Audience workbooks Check my results solution.md:64abfb7bc68f2c8eefa9915e4421c472
+markdowns\glossary\Apteco\Gl\Whitelisting.md:3d6f474d4b55ecf4761371d3e2eed6d3
+markdowns\glossary\Apteco\Gl\AI.md:2bef31a969d3689aff1de05f055b0531
+markdowns\glossary\Apteco\Gl\Digital_1.md:92230cfa6d776460a07b4bcae1b09809
+markdowns\glossary\Apteco.md:3090772025a903148505a1c5950977f0
+markdowns\workBooksInitialRelease\Audience Workbooks Initial Release.md:dfacf0d3748507fc1869f8de099a55d2
+markdowns\glossary\Apteco\Gl\Privacy.md:84c8591eada3e257d8d48216834f3526
+markdowns\glossary\Apteco\Gl\Analysis.md:8256af3a0e317cc2586fb5b836060df0

@@ -1,0 +1,50 @@
+
+    @staticmethod
+    def from_llm(
+        usingOpenAi,
+        tools: Optional[List[BaseTool]] = None,
+        llm: Optional[LLM] = None,
+        **kwargs: Any,
+    ) -> "AgentRunner":
+        from llama_index.core.agent import ReActAgent
+
+        if os.getenv("IS_TESTING"):
+            return ReActAgent.from_tools(
+                tools=tools,
+                llm=llm,
+                **kwargs,
+            )
+
+        if usingOpenAi:
+
+            try:
+                from llama_index.llms.openai import OpenAI  # pants: no-infer-dep
+                from llama_index.llms.openai.utils import (
+                    is_function_calling_model,
+                )  # pants: no-infer-dep
+            except ImportError:
+                raise ImportError(
+                    "`llama-index-llms-openai` package not found. Please "
+                    "install by running `pip install llama-index-llms-openai`."
+                )
+
+            if isinstance(llm, OpenAI) and is_function_calling_model(llm.model):
+                from llama_index.agent.openai import OpenAIAgent  # pants: no-infer-dep
+
+                return OpenAIAgent.from_tools(
+                    tools=tools,
+                    llm=llm,
+                    **kwargs,
+                )
+            else:
+                return ReActAgent.from_tools(
+                    tools=tools,
+                    llm=llm,
+                    **kwargs,
+                )
+        else:
+            return ReActAgent.from_tools(
+                tools=tools,
+                llm=llm,
+                **kwargs,
+            )

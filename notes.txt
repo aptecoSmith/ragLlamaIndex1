@@ -1,0 +1,34 @@
+install ollama
+https://ollama.com/
+
+once installed, in a terminal / cmd
+ollama pull mistral
+
+
+
+https://docs.llamaindex.ai/en/latest/getting_started/installation.html
+
+pip install llama-index-core llama-index-readers-file llama-index-llms-ollama llama-index-embeddings-huggingface
+
+
+https://docs.llamaindex.ai/en/latest/getting_started/starter_example_local.html
+
+
+install pgVector:
+https://github.com/pgvector/pgvector
+
+IIRC -
+Ensure Visual studio has c++
+
+install chocolatey ( there may be another way, I dunno)
+choco install make
+
+cmd window
+set "PGROOT=C:\Program Files\PostgreSQL\16"
+git clone --branch v0.6.0 https://github.com/pgvector/pgvector.git
+cd pgvector
+nmake /F Makefile.win
+nmake /F Makefile.win install
+
+
+call "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"

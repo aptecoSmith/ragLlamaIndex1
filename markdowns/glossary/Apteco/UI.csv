@@ -1,0 +1,25 @@
+﻿Name,Tags,de,Area
+Icon,,Icon,
+Edit Workspace Name,,Workspace Namen bearbeiten,
+Include codes in search,,Codes in der Suche einschließen,
+Measures,,Messgrößen,
+Reference,DataTypes,Referenz,FS OB
+Selector,DataTypes,Selektor,FS OB
+Numeric,DataTypes,Numerisch,FS OB
+Date,DataTypes,Datum,FS OB
+Multi Selector,DataTypes,Mehrfach-Selektor,FS OB
+Currency,DataTypes,Währung,FS OB
+Date/Time,DataTypes,Datum/Uhrzeit,FS OB
+High Earners in Bristol,Selection,Hohe Einkommen in Hessen,
+Recently Brought,,Kürzlich gekauft,
+High Purchase Frequency,,Hohe Kauffrequenz,
+High Turnover,,Hoher Umsatz,
+Application Settings,,Applikations Einstellungen,Orbit Admin
+View Campaigns,,Kampagnen anzeigen,
+Send to PDF,,An PDF senden,
+Send to Word,,An Word senden,
+Send to Orbit,,An Orbit senden,
+Open Story,,Story öffnen,
+Private Folder,,Ordner Private,
+Public Folder,,Ordner Public,
+Restore,,Wiederherstellen,
