@@ -52,7 +52,7 @@ class ResponseEngine:
 
         return query_engine
 
-    def update_vector_db(self, db, db_name):
+    def update_vector_db(self, db_name):
         # delete processed_files.txt in root to redo all files
         # this whole section needs to record to the db rather than a damn text file.
         processed_files_record = "processed_files.txt"
@@ -114,6 +114,34 @@ class ResponseEngine:
 
         return chat_engine
 
+    def load_index_for_chat_with_react(self, db_name, embed_size, llm):
+        print('Loading index')
+        vector_store = PGVectorStore.from_params(
+            database=db_name,
+            host=config.DB_HOST,
+            password=config.DB_PASSWORD_url,
+            port=config.DB_PORT,
+            user=config.DB_USER,
+            table_name="embeddings",
+            embed_dim=embed_size,  # openai embedding dimension
+        )
+
+        sys_prompt = ("You are a chatbot, specifically designed to "
+                      "advise on how to use the Apteco Orbit platform.  Your answers should only ever be about using "
+                      "Apteco software, and most answers can be found from the database. "
+                      "An 'Audience', sometimes called a 'Selection' or 'Segment' is created using the Orbit Audiences tool."
+                      "Audience, selection and segment are keywords that indicate we should be using Orbit Audiences.Here are the relevant documents for the context:\n"
+                      "{context_str}"
+                      "\nInstruction: Use the previous chat history, or the context above, to interact and help the user.  Where possible do not repeat earlier answers.")
+
+        index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
+        memory = ChatMemoryBuffer.from_defaults(token_limit=4000)
+        chat_engine = index.as_chat_engine(usingOpenAi=False, llm=llm, chat_mode='react',
+                                           memory=memory,
+                                           system_prompt=sys_prompt, similarity_top_k=5)
+
+        return chat_engine
+
     def load_index_for_chat_react_with_functions(self, db_name, embed_size, llm):
         print('Loading index')
         vector_store = PGVectorStore.from_params(
@@ -126,19 +154,19 @@ class ResponseEngine:
             embed_dim=embed_size,  # openai embedding dimension
         )
 
-        sys_prompt = ("""You have access to the following tools:
-{tool_desc}
-
-To answer the question, please use the following format.
+        sys_prompt = ("""You have access to the following tools: {tool_desc} You are a chatbot, specifically designed 
+        to advise on how to use the Apteco Orbit platform.  Your answers should only ever be about using Apteco 
+        software, and most answers can be found from the database. An 'Audience', sometimes called a 'Selection' or 
+        'Segment' is created using the Orbit Audiences tool. Audience, selection and segment are keywords that 
+        indicate we should be using Orbit Audiences.Here are the relevant documents for the context:\n {context_str} 
+        \nInstruction: Use the previous chat history, or the context above, to interact and help the user.  Where 
+        possible do not repeat earlier answers. To answer the question, please use the following format.
 
 ```
 Thought: I need to use a tool to help me answer the question.
 Action: tool name (one of {tool_names})
-Action Input: the input to the tool, in a JSON format representing the kwargs (e.g. {{"text": "hello world", "num_beams": 5}})
+Action Input: the input to the tool, (in plain text)
 ```
-Please use a valid JSON format for the action input. Do NOT do this {{'text': 'hello world', 'num_beams': 5}}.
-
-If this format is used, you will receive a response in the following format:
 
 ```
 Observation: tool response
@@ -147,22 +175,18 @@ Observation: tool response
         index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
         memory = ChatMemoryBuffer.from_defaults(token_limit=4000)
 
-        response_engine = index.as_chat_engine(usingOpenAi=False, llm=llm, chat_mode='react', memory=memory,
-                                           system_prompt=sys_prompt, similarity_top_k=5, verbose=True)
+        # response_engine = index.as_chat_engine(usingOpenAi=False, llm=llm, chat_mode='react', memory=memory,
+        #                                        system_prompt=sys_prompt, similarity_top_k=5, verbose=True)
 
-        agent_setup = AgentSetup(llm,db_name)
-        agent = agent_setup.return_agent(memory,self.get_query_engine_array(llm, db_name,response_engine))
-
+        db_engine = index.as_query_engine(similarity_top_k=5)
+        agent_setup = AgentSetup(llm, db_name)
+        query_engine_tools = self.get_query_engine_array(llm, db_name, db_engine)
+        agent = agent_setup.return_agent(memory, query_engine_tools, sys_prompt)
 
         return agent
 
-
-    def get_query_engine_array(self,llm,db_name,response_engine):
+    def get_query_engine_array(self, llm, db_name, response_engine):
 
         qes = QueryEngineSetup(llm)
         query_engine_tools = qes.get_query_engine_array(db_name, response_engine)
         return query_engine_tools
-
-
-
-

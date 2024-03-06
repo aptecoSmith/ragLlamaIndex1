@@ -19,7 +19,7 @@ Once you have clicked on the '+ New Audience' button, you will be prompted to na
 
 Once this is done, you will be taken to what we refer to as a 'Workbook'.  You may see this sometimes called an 'Audience Workbook'.
 
-The first tab of a workbook is always an audience and this is where you will land.
+The first tab of a workbook is always an 'audience tab' and this is where you will land.  This is where you will define what selection of criteria you want.
 
 On screen, the UI is broken down into a number of areas.
 At the top you can see the name of your audience that you supplied earlier.
@@ -77,7 +77,7 @@ If you hover over the audience node you will notice two blue buttons appear unde
 These are the node addition buttons And and OR.
 We have narrowed our Customer selection down to the time period we were interested in, but now we need to narrow down the product purchased.
 Click the small blue 'And' button to add another Audience node underneath the first.
-You will see this new node does not have an otion to select all People, but it does have an 'Add Filter' button.
+You will see this new node does not have an option to select all People, but it does have an 'Add Filter' button.
 Click on 'Add Filter' to open the System Search dialog.
 You could navigate through the tree to find the product category, or you could type into the search box 'Umbrella'.
 By default the system search returns variables, but you will see there is a tick box marked 'Include codes in search'.

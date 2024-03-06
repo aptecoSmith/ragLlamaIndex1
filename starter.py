@@ -226,7 +226,7 @@ def process_new_markdown_documents():
     Settings.llm = Ollama(model="mistral", request_timeout=90.0)
 
     db_name = 'vector_db'
-    db = EmbeddingDatabasePgVector()
+    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
 
@@ -254,7 +254,59 @@ def process_new_markdown_documents():
             print(f'Processing file: {markdown_file}')
             # Process new or updated file
             documents = SimpleDirectoryReader(markdown_file.parent).load_data()
-            db.create_index(db_name, documents, 1024)  # Or update_index if it exists
+            response_engine.create_index(db_name, documents, 1024)  # Or update_index if it exists
+
+            # Add to the set of processed files
+            processed_files.add(record_entry)
+
+    # Update the record of processed files
+    with open(processed_files_record, "w") as file:
+        for record in processed_files:
+            file.write(record + "\n")
+
+
+
+
+
+def process_new_markdown_documents_and_ask():
+    # Initialize embedding model, llm and database
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name="WhereIsAI/UAE-Large-V1", embed_batch_size=10
+    )
+
+    # ollama
+    Settings.llm = Ollama(model="mistral", request_timeout=90.0)
+
+    db_name = 'vector_db'
+    #db = EmbeddingDatabasePgVector()
+
+    response_engine = ResponseEngine()
+
+    # Assuming db.load_index() method loads the existing embeddings index
+    query_engine = response_engine.load_index(db_name, 1024)
+
+#this whole section needs to record to the db rather than a damn text file.
+    processed_files_record = "processed_files.txt"
+    processed_files = set()
+
+    # Load record of processed files if exists
+    if os.path.exists(processed_files_record):
+        with open(processed_files_record, "r") as file:
+            processed_files = set(file.read().splitlines())
+
+    # Scan /markdowns directory and subdirectories for new or updated markdown files
+    markdowns_path = Path("markdowns")
+    for markdown_file in markdowns_path.rglob('*.md'):
+        # Create a hash of the file content to detect changes
+        print(f'Hashing file: {markdown_file}')
+        file_hash = hashlib.md5(open(markdown_file, "rb").read()).hexdigest()
+        record_entry = f"{markdown_file}:{file_hash}"
+
+        if record_entry not in processed_files:
+            print(f'Processing file: {markdown_file}')
+            # Process new or updated file
+            documents = SimpleDirectoryReader(markdown_file.parent).load_data()
+            response_engine.create_index(db_name, documents, 1024)  # Or update_index if it exists
 
             # Add to the set of processed files
             processed_files.add(record_entry)
@@ -280,14 +332,14 @@ def chat_style_process_new_markdown_documents():
     Settings.llm = Ollama(model="mistral", request_timeout=90.0)
 
     db_name = 'vector_db'
-    db = EmbeddingDatabasePgVector()
+    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
 
-    # Assuming db.load_index() method loads the existing embeddings index
+
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db, db_name)
+    response_engine.update_vector_db(db_name)
 
     # Example usage of the updated database
     response = chat_engine.chat("How do I get an audience of 100 Ford drivers?")
@@ -324,14 +376,15 @@ def chat_style_process_new_markdown_documents_with_other_models():
     Settings.llm = Ollama(model="mistral", request_timeout=180.0)
 
     db_name = 'vector_db'
-    db = EmbeddingDatabasePgVector()
+    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
 
     # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db, db_name)
+    response_engine.update_vector_db( db_name)
+
     begins = time()
     print(begins)
     # Example usage of the updated database
@@ -376,15 +429,17 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
     Settings.llm = Ollama(model="mistral", request_timeout=180.0)
 
     db_name = 'vector_db'
-    db = EmbeddingDatabasePgVector()
+    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
 
     # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db, db_name)
+    response_engine.update_vector_db( db_name)
 
+    begins = time()
+    print(begins)
 
     question = "How do I get an audience of 100 Ford drivers?"
     print(f'Asking Question:\t {question}')
@@ -404,6 +459,11 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
     response = chat_engine.chat(question)
     print(textwrap.fill(str(response), 100))
     print('\n')
+
+    ends = time()
+    print(ends)
+    duration = ends - begins
+    print(duration)
     #
     # # Example usage of the updated database
     # response = query_engine.query("Right but I want to check that these people really do drive Fords")
@@ -432,11 +492,13 @@ def react_functions_chat_style_process_new_markdown_documents_with_other_models(
     response_engine = ResponseEngine()
 
     # Assuming db.load_index() method loads the existing embeddings index
-    chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
+    #chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
+    chat_engine = response_engine.load_index_for_chat_with_react(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db, db_name)
+    response_engine.update_vector_db( db_name)
 
-
+    begins = time()
+    print(begins)
     question = "How do I get an audience of 100 Ford drivers?"
     print(f'Asking Question:\t {question}')
     response = chat_engine.chat(question)
@@ -455,6 +517,12 @@ def react_functions_chat_style_process_new_markdown_documents_with_other_models(
     response = chat_engine.chat(question)
     print(textwrap.fill(str(response), 100))
     print('\n')
+
+    ends = time()
+    print(ends)
+    duration = ends-begins
+    print(duration)
+
     #
     # # Example usage of the updated database
     # response = query_engine.query("Right but I want to check that these people really do drive Fords")
@@ -485,11 +553,45 @@ def possibly_chat_mode():
     # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db, db_name)
+    response_engine.update_vector_db( db_name)
 
     chat_engine.chat_repl()
 
+def RagAndAgent():
+    print('RAG and Agent')
+    print('Initialize embedding model, llm and database')
+    begins = time()
+    print(begins)
+    # Initialize embedding model, llm and database
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name="WhereIsAI/UAE-Large-V1", embed_batch_size=10
+    )
 
+    # ollama
+    # mixtral uses much more RAM - 26gb
+    # trialling as mistral seems to be hallucinating some details
+    # Settings.llm = Ollama(model="mixtral", request_timeout=180.0)
+
+    Settings.llm = Ollama(model="mistral", request_timeout=180.0)
+
+    db_name = 'vector_db'
+    db = EmbeddingDatabasePgVector()
+    ends = time()
+    print(ends)
+    print('Time taken to load')
+    duration = ends - begins
+    print(duration)
+
+    #update vectors with amended markdowns
+    print('update vectors with amended markdowns')
+    begins = time()
+    response_engine = ResponseEngine()
+    response_engine.update_vector_db(db_name)
+    ends = time()
+    print(ends)
+    print('Time taken to update db')
+    duration = ends - begins
+    print(duration)
 
 
 #slower as you get more complex!
@@ -525,7 +627,7 @@ def possibly_chat_mode():
 #much quicker
 #example_with_different_embedder_loading_already_embedded_markdown_from_db()
 
-#process_new_markdown_documents()
+process_new_markdown_documents()
 
 #chat_style_process_new_markdown_documents()
 
@@ -538,3 +640,6 @@ chat_style_process_new_markdown_documents_with_other_models()
 
 #possibly_chat_mode()
 
+# it seems that including the glossary seems to make react talk a lot of gibberish - it is clearly not pulling the correct info from the db.
+#From that same, db, the earlier methods do seem to be giving mostly correct results.
+#By not including the glossary folder, react is much closer ( though still not as good as straight RAG).
