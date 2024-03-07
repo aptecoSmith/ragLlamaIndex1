@@ -383,12 +383,10 @@ def chat_style_process_new_markdown_documents_with_other_models():
     Settings.llm = Ollama(model="zephyr", request_timeout=180.0)
 
     db_name = 'vector_db'
-    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
     response_engine.update_vector_db(db_name)
 
-    # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
     begins = time()
@@ -407,26 +405,21 @@ def chat_style_process_new_markdown_documents_with_other_models():
 
     question = "Can you give me exact instructions?"
     print(f'Asking Question:\t {question}')
-    # Example usage of the updated database
     response = chat_engine.chat(question)
     print(textwrap.fill(str(response), 100))
     print('\n')
+
+    question = "What should I do next?"
+    print(f'Asking Question:\t {question}')
+    response = chat_engine.chat(question)
+    print(textwrap.fill(str(response), 100))
+    print('\n')
+
 
     ends = time()
     print(ends)
     duration = ends - begins
     print(duration)
-
-    # # Example usage of the updated database
-    # response = query_engine.query("How can I see other attributes of these people?")
-    # print(textwrap.fill(str(response), 100))
-    #
-    # # Example usage of the updated database
-    # response = query_engine.query("Right but I want to check that these people really do drive Fords")
-    # print(textwrap.fill(str(response), 100))
-    #
-    # response = query_engine.query("The people in my audience")
-    # print(textwrap.fill(str(response), 100))
 
 def chat_style_process_new_markdown_documents_with_other_models_chat_interface():
     # Initialize embedding model, llm and database
@@ -442,12 +435,10 @@ def chat_style_process_new_markdown_documents_with_other_models_chat_interface()
     #Settings.llm = Ollama(model="mistral", request_timeout=180.0)
 
     db_name = 'vector_db'
-    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
     response_engine.update_vector_db(db_name)
 
-    # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
 
@@ -469,11 +460,10 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
     #Settings.llm = Ollama(model="mistral", request_timeout=360.0)
 
     db_name = 'vector_db'
-    #db = EmbeddingDatabasePgVector()
+
 
     response_engine = ResponseEngine()
 
-    # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
 
     response_engine.update_vector_db( db_name)
