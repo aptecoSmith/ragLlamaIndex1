@@ -11,6 +11,7 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from tqdm import tqdm
 import config
 from agent_tools import AgentSetup
+from prompt_custom import react_system_prompt
 from query_engine_setup import QueryEngineSetup
 
 
@@ -154,23 +155,7 @@ class ResponseEngine:
             embed_dim=embed_size,  # openai embedding dimension
         )
 
-        sys_prompt = ("""You have access to the following tools: {tool_desc} You are a chatbot, specifically designed 
-        to advise on how to use the Apteco Orbit platform.  Your answers should only ever be about using Apteco 
-        software, and most answers can be found from the database. An 'Audience', sometimes called a 'Selection' or 
-        'Segment' is created using the Orbit Audiences tool. Audience, selection and segment are keywords that 
-        indicate we should be using Orbit Audiences.Here are the relevant documents for the context:\n {context_str} 
-        \nInstruction: Use the previous chat history, or the context above, to interact and help the user.  Where 
-        possible do not repeat earlier answers. To answer the question, please use the following format.
-
-```
-Thought: I need to use a tool to help me answer the question.
-Action: tool name (one of {tool_names})
-Action Input: the input to the tool, (in plain text)
-```
-
-```
-Observation: tool response
-```""")
+#
 
         index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
         memory = ChatMemoryBuffer.from_defaults(token_limit=4000)
@@ -178,10 +163,16 @@ Observation: tool response
         # response_engine = index.as_chat_engine(usingOpenAi=False, llm=llm, chat_mode='react', memory=memory,
         #                                        system_prompt=sys_prompt, similarity_top_k=5, verbose=True)
 
-        db_engine = index.as_query_engine(similarity_top_k=5)
+        db_engine = index.as_query_engine(similarity_top_k=10)
         agent_setup = AgentSetup(llm, db_name)
         query_engine_tools = self.get_query_engine_array(llm, db_name, db_engine)
-        agent = agent_setup.return_agent(memory, query_engine_tools, sys_prompt)
+        agent = agent_setup.return_agent(memory, query_engine_tools)
+
+        # agent.update_prompts({"agent_worker:system_prompt": react_system_prompt})
+        #
+        # abc = agent.agent_worker
+
+
 
         return agent
 

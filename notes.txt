@@ -3,6 +3,7 @@ https://ollama.com/
 
 once installed, in a terminal / cmd
 ollama pull mistral
+ollama pull mixtral
 
 
 
@@ -32,3 +33,13 @@ nmake /F Makefile.win install
 
 
 call "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"
+
+
+
+Put the markdowns in the markdowns folder
+
+These markdowns will be embedded in your pgVector db
+Each markdown will be hashed and added to processed_files.txt.
+On each run, the markdowns are hashed again and any that have changed are re-embedded.
+
+Delete processed_files.txt, and delete the table in pGAdmin, to re embed afresh.

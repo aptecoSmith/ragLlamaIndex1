@@ -1,5 +1,7 @@
 from llama_index.core.tools import FunctionTool
-from llama_index.core.agent import ReActAgent
+from llama_index.core.agent import ReActAgent, ReActChatFormatter
+
+from prompt_custom import react_system_prompt
 
 
 class AgentSetup:
@@ -23,7 +25,7 @@ class AgentSetup:
         combined_tools = query_engine_tools + tools
         return combined_tools
 
-    def return_agent(self, mem, query_engine_tools, inbound_context):
+    def return_agent(self, mem, query_engine_tools):
         # context = ("You are a chatbot, specifically designed to "
         #            "advise on how to use the Apteco Orbit platform.  Your answers should only ever be about using "
         #            "Apteco software, and most answers can be found from the database.  Never suggest answers that are "
@@ -35,8 +37,16 @@ class AgentSetup:
         #            "{context_str}"
         #            "\nInstruction: Use the previous chat history, or the context above, to interact and help the "
         #            "user.  Where possible do not repeat earlier answers.")
-        agent = ReActAgent.from_tools(self.add_tools_to_query_engine(query_engine_tools), llm=self.llm, verbose=True,
-                                      memory=mem, context=inbound_context,similarity_top_k=5)
+
+        tools = self.add_tools_to_query_engine(query_engine_tools)
+
+        chat_formatter = ReActChatFormatter()
+
+        chat_formatter.system_header = react_system_prompt
+
+        agent = ReActAgent.from_tools(tools=tools, llm=self.llm, verbose=True,
+                                      memory=mem, react_chat_formatter=chat_formatter)
+
         return agent
 
 

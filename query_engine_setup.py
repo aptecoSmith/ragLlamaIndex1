@@ -18,8 +18,7 @@ class QueryEngineSetup:
                 metadata=ToolMetadata(
                     name="startup_context",
                     description=(
-                        "Information and documentation relevant to the use of Apteco software including documentation "
-                        "and general knowledge"
+                        "Information and documentation relevant to the use of Apteco Orbit software including documentation."                        
                         "Use any question regarding marketing, or using Apteco software as input to the tool."
                         "Any answer regarding Apteco Orbit should match the information retrieved."
                     ),

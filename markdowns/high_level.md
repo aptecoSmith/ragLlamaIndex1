@@ -8,3 +8,5 @@ All Selection criteria are on the 'Audience' tab of the opened audience.
 The data for your Orbit system will already be loaded by your system administrator.  You do not need to load it yourself.
 Your customer data is always already loaded into the Orbit platform.
 You can only query on data within your system.
+
+The data segmentation tool in Orbit is called 'Audiences'

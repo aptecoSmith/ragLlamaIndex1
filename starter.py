@@ -10,7 +10,11 @@ from llama_index.core.llms import llm
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.llama_cpp import LlamaCPP
 from llama_index.llms.ollama import Ollama
+import llama_index.core
 
+
+#for react logging
+#llama_index.core.set_global_handler("simple")
 
 import logging
 import sys
@@ -22,6 +26,7 @@ from response_enginefrom_index import ResponseEngine
 
 # logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 # logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+
 
 
 # bge-m3 embedding model
@@ -335,11 +340,12 @@ def chat_style_process_new_markdown_documents():
     #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
+    response_engine.update_vector_db(db_name)
 
 
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db(db_name)
+
 
     # Example usage of the updated database
     response = chat_engine.chat("How do I get an audience of 100 Ford drivers?")
@@ -373,34 +379,42 @@ def chat_style_process_new_markdown_documents_with_other_models():
     #trialling as mistral seems to be hallucinating some details
     #Settings.llm = Ollama(model="mixtral", request_timeout=180.0)
 
-    Settings.llm = Ollama(model="mistral", request_timeout=180.0)
+    #Settings.llm = Ollama(model="mistral", request_timeout=180.0)
+    Settings.llm = Ollama(model="zephyr", request_timeout=180.0)
 
     db_name = 'vector_db'
     #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
+    response_engine.update_vector_db(db_name)
 
     # Assuming db.load_index() method loads the existing embeddings index
     chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
 
-    response_engine.update_vector_db( db_name)
-
     begins = time()
     print(begins)
-    # Example usage of the updated database
-    print('Asking Question')
-    response = chat_engine.chat("How do I get an audience of 100 Ford drivers?")
+    question = "How do I get an audience of 100 Ford drivers?"
+    print(f'Asking Question:\t {question}')
+    response = chat_engine.chat(question)
     print(textwrap.fill(str(response), 100))
     print('\n')
 
-    print('Asking Question')
-    # Example usage of the updated database
-    response = chat_engine.chat("How exactly do I know there is 100?")
+    question = "How exactly do I know there is 100?"
+    print(f'Asking Question:\t {question}')
+    response = chat_engine.chat(question)
     print(textwrap.fill(str(response), 100))
     print('\n')
+
+    question = "Can you give me exact instructions?"
+    print(f'Asking Question:\t {question}')
+    # Example usage of the updated database
+    response = chat_engine.chat(question)
+    print(textwrap.fill(str(response), 100))
+    print('\n')
+
     ends = time()
     print(ends)
-    duration = ends-begins
+    duration = ends - begins
     print(duration)
 
     # # Example usage of the updated database
@@ -414,6 +428,32 @@ def chat_style_process_new_markdown_documents_with_other_models():
     # response = query_engine.query("The people in my audience")
     # print(textwrap.fill(str(response), 100))
 
+def chat_style_process_new_markdown_documents_with_other_models_chat_interface():
+    # Initialize embedding model, llm and database
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name="WhereIsAI/UAE-Large-V1", embed_batch_size=10
+    )
+
+    # ollama
+    #mixtral uses much more RAM - 26gb
+    #trialling as mistral seems to be hallucinating some details
+    Settings.llm = Ollama(model="mixtral", request_timeout=180.0)
+
+    #Settings.llm = Ollama(model="mistral", request_timeout=180.0)
+
+    db_name = 'vector_db'
+    #db = EmbeddingDatabasePgVector()
+
+    response_engine = ResponseEngine()
+    response_engine.update_vector_db(db_name)
+
+    # Assuming db.load_index() method loads the existing embeddings index
+    chat_engine = response_engine.load_index_for_chat(db_name, 1024, llm=Settings.llm)
+
+
+
+    chat_engine.chat_repl()
+
 
 def react_chat_style_process_new_markdown_documents_with_other_models():
     # Initialize embedding model, llm and database
@@ -424,9 +464,9 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
     # ollama
     #mixtral uses much more RAM - 26gb
     #trialling as mistral seems to be hallucinating some details
-    #Settings.llm = Ollama(model="mixtral", request_timeout=180.0)
+    Settings.llm = Ollama(model="mixtral", request_timeout=360.0)
 
-    Settings.llm = Ollama(model="mistral", request_timeout=180.0)
+    #Settings.llm = Ollama(model="mistral", request_timeout=360.0)
 
     db_name = 'vector_db'
     #db = EmbeddingDatabasePgVector()
@@ -437,6 +477,8 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
     chat_engine = response_engine.load_index_for_chat_react_with_functions(db_name, 1024, llm=Settings.llm)
 
     response_engine.update_vector_db( db_name)
+
+
 
     begins = time()
     print(begins)
@@ -474,6 +516,8 @@ def react_chat_style_process_new_markdown_documents_with_other_models():
 
 
 def react_functions_chat_style_process_new_markdown_documents_with_other_models():
+
+
     # Initialize embedding model, llm and database
     Settings.embed_model = HuggingFaceEmbedding(
         model_name="WhereIsAI/UAE-Large-V1", embed_batch_size=10
@@ -546,7 +590,7 @@ def possibly_chat_mode():
     Settings.llm = Ollama(model="mistral", request_timeout=180.0)
 
     db_name = 'vector_db'
-    db = EmbeddingDatabasePgVector()
+    #db = EmbeddingDatabasePgVector()
 
     response_engine = ResponseEngine()
 
@@ -627,13 +671,13 @@ def RagAndAgent():
 #much quicker
 #example_with_different_embedder_loading_already_embedded_markdown_from_db()
 
-process_new_markdown_documents()
+#process_new_markdown_documents()
 
 #chat_style_process_new_markdown_documents()
 
 #ollama pull mixtral
 
-chat_style_process_new_markdown_documents_with_other_models()
+
 
 #this isn't providing as good an answer as above - something about the thoughts and actions I think I might not have set up enough
 #react_chat_style_process_new_markdown_documents_with_other_models()
@@ -643,3 +687,10 @@ chat_style_process_new_markdown_documents_with_other_models()
 # it seems that including the glossary seems to make react talk a lot of gibberish - it is clearly not pulling the correct info from the db.
 #From that same, db, the earlier methods do seem to be giving mostly correct results.
 #By not including the glossary folder, react is much closer ( though still not as good as straight RAG).
+
+
+#the winner IMO - no react
+chat_style_process_new_markdown_documents_with_other_models()
+
+#chat style but not react
+#chat_style_process_new_markdown_documents_with_other_models_chat_interface()
