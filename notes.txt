@@ -14,6 +14,16 @@ pip install llama-index-core llama-index-readers-file llama-index-llms-ollama ll
 
 https://docs.llamaindex.ai/en/latest/getting_started/starter_example_local.html
 
+The base llama_index libraries default to openAI - you have to pip individually to avoid this.
+
+Some classes have dependencies called mid-method.  There were two examples of this I found:
+indices/base.py
+and
+runner/base.py
+
+The amended methods are in text files for you to copy in.
+
+--------The embeddings use a local postgres vector db
 
 install pgVector:
 https://github.com/pgvector/pgvector
@@ -34,7 +44,8 @@ nmake /F Makefile.win install
 
 call "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"
 
-
+---------------------
+The RAG pulls docs from a markdown folder
 
 Put the markdowns in the markdowns folder
 
@@ -43,3 +54,10 @@ Each markdown will be hashed and added to processed_files.txt.
 On each run, the markdowns are hashed again and any that have changed are re-embedded.
 
 Delete processed_files.txt, and delete the table in pGAdmin, to re embed afresh.
+
+
+-----
+
+The file starter.py is where you should start.
+
+Scroll down to the bottom and you'll see lots of commented out method calls.  One should not be commented.
